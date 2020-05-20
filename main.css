@@ -1,30 +1,30 @@
 /* start global styles */
 @font-face {
   font-family: "SpaceGrotesk";
-  src: url("../fonts/SpaceGrotesk-Regular.eot");
-  src: local("☺"), url("../fonts/SpaceGrotesk-Regular.woff") format("woff"),
-    url("../fonts/SpaceGrotesk-Regular.ttf") format("truetype"),
-    url("../fonts/SpaceGrotesk-Regular.svg") format("svg");
+  src: url("fonts/SpaceGrotesk-Regular.eot");
+  src: local("☺"), url("fonts/SpaceGrotesk-Regular.woff") format("woff"),
+    url("fonts/SpaceGrotesk-Regular.ttf") format("truetype"),
+    url("fonts/SpaceGrotesk-Regular.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SpaceGrotesk";
-  src: url("../fonts/SpaceGrotesk-Light.eot");
-  src: local("☺"), url("../fonts/SpaceGrotesk-Light.woff") format("woff"),
-    url("../fonts/SpaceGrotesk-Light.ttf") format("truetype"),
-    url("../fonts/SpaceGrotesk-Light.svg") format("svg");
+  src: url("fonts/SpaceGrotesk-Light.eot");
+  src: local("☺"), url("fonts/SpaceGrotesk-Light.woff") format("woff"),
+    url("fonts/SpaceGrotesk-Light.ttf") format("truetype"),
+    url("fonts/SpaceGrotesk-Light.svg") format("svg");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SpaceGrotesk";
-  src: url("../../fonts/SpaceGrotesk-Bold.eot");
-  src: local("☺"), url("../../fonts/SpaceGrotesk-Bold.woff") format("woff"),
-    url("../fonts/SpaceGrotesk-Bold.ttf") format("truetype"),
-    url("../fonts/SpaceGrotesk-Bold.svg") format("svg");
+  src: url("fonts/SpaceGrotesk-Bold.eot");
+  src: local("☺"), url("fonts/SpaceGrotesk-Bold.woff") format("woff"),
+    url("fonts/SpaceGrotesk-Bold.ttf") format("truetype"),
+    url("fonts/SpaceGrotesk-Bold.svg") format("svg");
   font-weight: 700;
   font-style: normal;
 }
