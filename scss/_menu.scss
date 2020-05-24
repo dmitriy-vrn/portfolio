@@ -1,0 +1,111 @@
+// Menu button
+
+// main menu
+.top-nav {
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  position: fixed;
+  top: -100vh;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  @include cubic-bezier;
+
+  .nav-list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  li {
+    margin: 0 2rem;
+
+    .nav-link {
+      font-size: 3rem;
+      padding: 5px;
+      position: relative;
+      transition: all 0.6s;
+      font-weight: $fw-light;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        transition: all 0.3s;
+      }
+
+      &:hover::before {
+        width: 100%;
+        left: 0;
+        background: #fff;
+      }
+    }
+  }
+
+  &.open {
+    top: 0;
+    border-radius: initial;
+    background: $secondary-color;
+  }
+}
+
+// button
+
+.menu-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  width: 3rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1000;
+  @include easeOut;
+
+  &.open {
+    transform: rotate(-45deg);
+    .bar {
+      background: #fff;
+    }
+  }
+  .bar {
+    @include gradient;
+    width: 100%;
+    height: 3px;
+    border-radius: 0.8rem;
+
+    &.half {
+      width: 50%;
+    }
+
+    &.start {
+      transform-origin: right;
+      @include btnTransform;
+    }
+
+    &.end {
+      align-self: flex-end;
+      transform-origin: left;
+      @include btnTransform;
+    }
+  }
+}
+
+.open {
+  .bar {
+    &.start {
+      transform: rotate(-450deg) translateX(0.6rem);
+    }
+    &.end {
+      transform: rotate(-450deg) translateX(-0.6rem);
+    }
+  }
+}

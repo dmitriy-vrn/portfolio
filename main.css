@@ -1,5 +1,5 @@
 /* start global styles */
-@font-face {
+/* @font-face {
   font-family: "SpaceGrotesk";
   src: url("fonts/SpaceGrotesk-Regular.eot");
   src: local("☺"), url("fonts/SpaceGrotesk-Regular.woff") format("woff"),
@@ -26,6 +26,27 @@
     url("fonts/SpaceGrotesk-Bold.ttf") format("truetype"),
     url("fonts/SpaceGrotesk-Bold.svg") format("svg");
   font-weight: 700;
+  font-style: normal;
+} */
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url(/fonts/SpaceGrotesk-Bold.woff2) format("woff2"),
+    url(/fonts/SpaceGrotesk-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url(/fonts/SpaceGrotesk-Regular.woff2) format("woff2"),
+    url(/fonts/SpaceGrotesk-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url(/fonts/SpaceGrotesk-Light.woff2) format("woff2"),
+    url(/fonts/SpaceGrotesk-Light.woff) format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -70,6 +91,7 @@ body {
     position: fixed;
     top: -100%;
     width: 300%;
+    z-index: -1;
   }
 }
 
@@ -187,25 +209,6 @@ li {
   z-index: 1000;
   transition: transform 650ms ease-out;
 }
-/* 
-   !dark background on burger
-
-.menu-toggle::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 5px;
-  background: #000;
-  opacity: 0.3;
-}
-
-.menu-toggle.open::after {
-  display: none;
-} */
 
 .menu-toggle.open {
   transform: rotate(-45deg);
@@ -269,85 +272,13 @@ li {
   user-select: none;
 }
 .main-title h2 {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 300;
 }
 
 /* header end */
 
 /* about start  */
-/* !ABOUT SECTION DEFAULT */
-/* .about .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about__title {
-  text-align: center;
-  line-height: 0;
-  margin-bottom: 2rem;
-}
-
-.about__title h1 {
-  font-size: 10rem;
-  line-height: 10rem;
-  font-weight: 300;
-  opacity: 0.3;
-}
-.about p {
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.portfolio-img {
-  flex: 1;
-  margin-right: 5rem;
-  max-width: 400px;
-  max-height: 450px;
-}
-
-.about__details {
-  flex: 1;
-}
-
-.social-media {
-  margin-top: 5rem;
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.social__link {
-  transition: color 650ms ease-in-out;
-}
-
-.social__link--vk:hover {
-  color: #4a76a8;
-}
-.social__link--ig:hover {
-  color: #fcaf45;
-}
-.social__link--gm:hover {
-  color: #db4437;
-}
-
-.vk-link {
-  color: #4a76a8;
-}
-.ig-link {
-  color: #fcaf45;
-}
-
-.gm-link {
-  color: #db4437;
-}
-
-.social-media__title {
-  font-weight: 300;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 5rem;
-} */
 
 .about-me {
   max-width: 1150px;
@@ -394,7 +325,6 @@ li {
 }
 
 .section__subtitle--about {
-  margin-bottom: 1em;
   padding: 0.25em 1em;
   background: #3428ff;
   margin-bottom: 0.25em;
@@ -409,7 +339,7 @@ li {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 15px;
 }
 
@@ -418,8 +348,8 @@ li {
 }
 
 .portfolio__img {
-  transition: 350ms ease-in-out;
-  filter: grayscale(100%);
+  transition: 550ms ease-out;
+  filter: grayscale(80%);
 }
 
 .portfolio__img:hover {
@@ -444,4 +374,64 @@ li {
   width: 100%;
   left: 0;
   background: #fff;
+}
+
+/* footer */
+
+footer {
+  padding: 150px 10px;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 20px;
+  margin-bottom: 10rem; */
+}
+
+.social__link--vk:hover {
+  color: #4a76a8;
+}
+.email .info p {
+  font-size: 30px;
+  color: gray;
+}
+
+.info a {
+  font-size: 2rem;
+}
+
+/* animation type writer */
+
+.line {
+  width: 5.75em;
+  top: 50%;
+  margin: auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.anim-typewriter {
+  animation: typewriter 3s steps(40) 1s 1 normal both,
+    blinkTextCursor 600ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 5.75em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
