@@ -9,6 +9,7 @@ function burgerMenu(navToggle) {
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       menu.classList.remove("open");
+      navToggle.classList.remove("open");
     });
   });
 }
