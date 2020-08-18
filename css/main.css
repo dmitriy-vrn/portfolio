@@ -416,14 +416,12 @@ header {
   position: relative;
   left: -1em;
   width: calc(100% + 2em);
-  padding-left: 1em;
-  padding-right: calc(200px + 2em);
-  font-size: 20px;
+  font-size: 18px;
   background: #3428ff;
   color: #151517;
   font-weight: 400;
   background: #3428ff;
-  padding: 0.5rem;
+  padding: 1rem;
   color: #151517;
   font-weight: 400;
 }
